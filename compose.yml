@@ -1,0 +1,36 @@
+---
+services:
+  db:
+    image: saivennelakota/pythonapp:dbimage
+    ports:
+      - "3306:3306"
+    deploy:
+      replicas: 2
+
+  auth_service:
+    image: saivennelakota/pythonapp:authimage
+    ports:
+      - "5001:5001"
+    deploy:
+      replicas: 2
+
+  book_service:
+    image: saivennelakota/pythonapp:bookimage
+    ports:
+      - "5002:5002"
+    deploy:
+      replicas: 2
+
+  borrow_service:
+    image: saivennelakota/pythonapp:borrowimage
+    ports:
+      - "5003:5003"
+    deploy:
+      replicas: 2
+
+  frontend:
+    image: saivennelakota/pythonapp:frontendimage
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 2
