@@ -29,7 +29,7 @@ services:
       replicas: 2
 
   frontend:
-    image: saivennelakota/library-application:frontendimage
+    image: saivennelakota/library-application:appimage
     ports:
       - "5000:5000"
     deploy:
