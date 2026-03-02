@@ -6,7 +6,7 @@ app.secret_key = "supersecretkey"
 
 AUTH_URL = "http://auth-service:5001"
 BOOK_URL = "http://book-service:5002"
-BORROW_URL = "http://borrow-ervice:5003"
+BORROW_URL = "http://borrow-service:5003"
 
 @app.route("/")
 def home():
