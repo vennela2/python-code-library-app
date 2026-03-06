@@ -7,21 +7,21 @@ services:
     deploy:
       replicas: 2
 
-  auth_service:
+  auth-service:
     image: saivennelakota/library-app:authimage
     ports:
       - "5001:5001"
     deploy:
       replicas: 2
 
-  book_service:
+  book-service:
     image: saivennelakota/library-app:bookimage
     ports:
       - "5002:5002"
     deploy:
       replicas: 2
 
-  borrow_service:
+  borrow-service:
     image: saivennelakota/library-app:borrowimage
     ports:
       - "5003:5003"
