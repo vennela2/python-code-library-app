@@ -1,35 +1,35 @@
 ---
 services:
   db:
-    image: saivennelakota/library-application:dbimage
+    image: saivennelakota/library-app:dbimage
     ports:
       - "3306:3306"
     deploy:
       replicas: 2
 
   auth_service:
-    image: saivennelakota/library-application:authimage
+    image: saivennelakota/library-app:authimage
     ports:
       - "5001:5001"
     deploy:
       replicas: 2
 
   book_service:
-    image: saivennelakota/library-application:bookimage
+    image: saivennelakota/library-app:bookimage
     ports:
       - "5002:5002"
     deploy:
       replicas: 2
 
   borrow_service:
-    image: saivennelakota/library-application:borrowimage
+    image: saivennelakota/library-app:borrowimage
     ports:
       - "5003:5003"
     deploy:
       replicas: 2
 
   frontend:
-    image: saivennelakota/library-application:appimage
+    image: saivennelakota/library-app:appimage
     ports:
       - "5000:5000"
     deploy:
